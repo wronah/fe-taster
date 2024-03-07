@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { setMode } from './lib/utils';
+import { setMode } from './services/darkModeService';
 
 onMounted(() => {
   setMode()

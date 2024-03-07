@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Sun, Moon } from 'lucide-vue-next'
-import { toggleDarkMode, isDarkMode } from '../lib/utils';
+import { toggleDarkMode, isDarkMode } from '../services/darkModeService';
 </script>
 <template>
     <div class="flex flex-row justify-end p-2" >
