@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt', 'nuxt-lucide-icons'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'shadcn-nuxt', 'nuxt-lucide-icons'],
   shadcn: {
     /**
      * Prefix for all the imported component
@@ -11,4 +11,13 @@ export default defineNuxtConfig({
      */
     componentDir: './components/ui'
   },
+  colorMode: {
+    preference: 'dark', // default value of $colorMode.preference
+    hid: 'nuxt-color-mode-script',
+    globalName: '__NUXT_COLOR_MODE__',
+    componentName: 'ColorScheme',
+    classPrefix: '',
+    classSuffix: '',
+    storageKey: 'nuxt-color-mode'
+  }
 })

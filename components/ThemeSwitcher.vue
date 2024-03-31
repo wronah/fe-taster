@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { Sun, Moon } from 'lucide-vue-next'
-import { toggleDarkMode, isDarkMode } from '../services/darkModeService';
+const colorMode = useColorMode()
 </script>
 
 <template>
-    <Button @click="toggleDarkMode()">
-        <Sun v-if="isDarkMode"/>
-        <Moon v-else />
-    </Button>
+    <ColorScheme tag="theme-switcher">
+        <Button @click="() => colorMode.preference === 'dark' ? colorMode.preference = 'light' : colorMode.preference = 'dark'">
+            <Sun v-if="colorMode.preference === 'dark'"/>
+            <Moon v-else />
+        </Button>
+    </ColorScheme>
 </template>
